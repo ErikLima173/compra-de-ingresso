@@ -7,7 +7,7 @@ const qtdDisponivel = {
 function comprar() {
 
   const tipoIngresso = document.getElementById('tipo-ingresso').value;
-  const qtd = parseFloat(document.getElementById('qtd').value);
+  const qtd = parseInt(document.getElementById('qtd').value);
   const disponivel = parseInt(qtdDisponivel[tipoIngresso].textContent);
   const adquirido = disponivel - qtd;
   
@@ -17,7 +17,7 @@ function comprar() {
   }
 
   if (qtd > disponivel) {
-    alert('A quantidade informada excede o número de ingressos disponíveis.');
+    alert(`Quantidade indisponível para tipo ${tipoIngresso}`);
     return;
   } else {
     alert('Compra realizada com sucesso!');
