@@ -1,39 +1,59 @@
-Projeto de Compra de Ingressos
+🎟️ Projeto de Compra de Ingressos
 
-Este projeto foi desenvolvido como exercício de lógica de programação em JavaScript puro, durante meus estudos na Alura.
+Este projeto é uma implementação de um sistema simples de compra de ingressos usando JavaScript puro, com foco em lógica de programação e manipulação do DOM. Foi desenvolvido como parte dos estudos realizados na plataforma Alura e passou por refatoração para melhorar legibilidade e organização do código.
 
-Descrição
+📌 Funcionalidades
 
-O objetivo do projeto é criar uma pequena aplicação que permita ao usuário:
+Seleção de tipo de ingresso (pista, superior, inferior).
 
-Selecionar o tipo de ingresso (Pista, Cadeira Superior, Cadeira Inferior).
+Inserção da quantidade desejada.
 
-Inserir a quantidade desejada.
+Validação da quantidade:
 
-Validar se a quantidade é válida e se há ingressos disponíveis.
+⚠️ Não permite valores negativos ou não numéricos.
 
-Atualizar dinamicamente a quantidade restante no DOM.
+⚠️ Verifica se há ingressos suficientes disponíveis.
 
-Tudo isso foi feito sem frameworks, apenas com HTML, CSS e JavaScript puro, focando em manipulação do DOM e lógica de programação.
+Atualização dinâmica da quantidade disponível no DOM.
 
-Aprendizados
+Mensagens de alerta para sucesso ou erro na compra.
 
-Utilização de document.getElementById para acessar elementos do DOM.
+Reset do campo de quantidade após a compra.
 
-Manipulação de valores de inputs (.value) e de spans (.textContent).
+💡 Aprendizado
 
-Conversão de strings para números (parseInt, parseFloat).
+Durante a implementação e refatoração deste projeto, aprendi:
 
-Estruturas de controle (if, return) para validação de dados.
+Manipulação do DOM 💻:
 
-Organização de elementos do DOM em objetos para facilitar o acesso dinâmico.
+Uso de document.getElementById para acessar elementos HTML.
 
-Atualização de conteúdo do DOM de forma segura e lógica.
+Alteração de conteúdo de elementos (textContent) dinamicamente.
 
-Tecnologias usadas
+Validação de dados ✅:
 
-HTML5
+Checagem de número válido (isNaN) e limite permitido.
 
-CSS3
+Estrutura condicional 🔀:
 
-JavaScript (puro)
+Uso de if/else para controlar o fluxo da compra.
+
+Boas práticas de código ✨:
+
+Armazenar referências a elementos em objetos (qtdDisponivel).
+
+Separar lógica de verificação da lógica de atualização do DOM.
+
+Nomes claros de variáveis (tipoIngresso, disponivel, adquirido) para facilitar leitura.
+
+💻 Tecnologias utilizadas
+
+HTML para estrutura da página.
+
+CSS para estilização básica (opcional).
+
+JavaScript puro para lógica de programação e interação com o usuário.
+
+📝 Observações
+
+Este projeto é um exercício de lógica de programação e manipulação de DOM, demonstrando aprendizado prático de JavaScript puro, inspirado nas aulas da Alura. O código foi refatorado para melhorar a legibilidade, clareza e manutenção futura.
