@@ -1,33 +1,29 @@
+const qtdDisponivel = {
+  pista: document.getElementById("qtd-pista"),
+  superior: document.getElementById("qtd-superior"),
+  inferior: document.getElementById("qtd-inferior")
+};
+
 function comprar() {
-  let tipoIngresso = document.getElementById('tipo-ingresso').value;
-  let quantidade = parseFloat(document.getElementById('qtd').value);
-  let qtdDisponivel = {
-    pista: document.getElementById("qtd-pista"),
-    superior: document.getElementById("qtd-superior"),
-    inferior: document.getElementById("qtd-inferior")
-  };
 
-
-  let disponivel = parseInt(qtdDisponivel[tipoIngresso].textContent);
-  let compra = disponivel - quantidade;
-
-  if (quantidade <= 0) {
-    alert('quantidade inválida!');
+  const tipoIngresso = document.getElementById('tipo-ingresso').value;
+  const qtd = parseFloat(document.getElementById('qtd').value);
+  const disponivel = parseInt(qtdDisponivel[tipoIngresso].textContent);
+  const adquirido = disponivel - qtd;
+  
+  if (qtd <= 0 || isNaN(qtd)) {
+    alert('Quantidade inválida!');
     return;
   }
 
-  if (quantidade > disponivel) {
-    alert('Sinto muito, todos ingressos já foram esgotados.');
+  if (qtd > disponivel) {
+    alert('A quantidade informada excede o número de ingressos disponíveis.');
     return;
+  } else {
+    alert('Compra realizada com sucesso!');
   }
 
-  qtdDisponivel[tipoIngresso].textContent = compra;
+  document.getElementById("qtd").value = "";
 
-
-
-
-
-
-
-  console.log(compra);
+  qtdDisponivel[tipoIngresso].textContent = adquirido;
 }
